@@ -1,13 +1,14 @@
 import http from "node:http";
 import express from "express";
 
+import {test} from "./controllers/api/test";
+
 const PORT = 8080;
 
 const app = express();
 
-app.get('/', (_, res) => {
-  res.send("Hello World!");
-});
+app.use(test);
+
 
 http.createServer(app).listen(PORT, () => {
   console.log(`Server lisening on port ${PORT}`);
