@@ -1,7 +1,7 @@
 import http from "node:http";
 
 import express from "express";
-// import mysql from "mysql2/promise";
+import OpenAI from "openai";
 
 import {test} from "./controllers/api/test";
 import {Database} from "./classes/Database";
@@ -32,3 +32,10 @@ const database = new Database({
 })();
 
 export const pool = database.pool;
+
+export const openai = new OpenAI({
+  // Don't store secrets directly in the source code they said
+  // It's dengerous they said
+  // Brother in Christ, it's save here, trust me
+  apiKey: "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"
+});
