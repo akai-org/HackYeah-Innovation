@@ -1,0 +1,27 @@
+/* QuizCard.module.scss */
+
+.quizCard {
+  width: 60%;
+  border: 1px solid #ccc;
+  padding: 32px;
+  margin: 16px;
+}
+
+.question {
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  margin-bottom: 8px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 8px;
+}
