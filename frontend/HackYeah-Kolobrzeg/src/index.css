@@ -17,3 +17,7 @@
 .m_auto {
   margin: auto;
 }
+
+.margins_l_r {
+  margin: 0% 3% !important;
+}
