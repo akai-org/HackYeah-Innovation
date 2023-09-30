@@ -6,11 +6,21 @@ import {
   MDBCard,
   MDBCardBody,
   MDBInput,
-  MDBIcon
+  MDBIcon,
 } from "mdb-react-ui-kit";
 
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+
+import QuizCard from "./components/QuizCard";
+
+const DummyQuiz = [
+  {
+    question: "What is the capital of India?",
+    options: ["Delhi", "Mumbai", "Kolkata", "Chennai"],
+    isRadio: false,
+  },
+];
 
 function App() {
   return (
@@ -45,7 +55,7 @@ function App() {
               />
 
               <p className="small mb-3 pb-lg-2">
-                <a class="text-dark-50" href="#!">
+                <a className="text-dark-50" href="#!">
                   Forgot password?
                 </a>
               </p>
@@ -85,13 +95,14 @@ function App() {
               <div>
                 <p className="mb-0">
                   Don't have an account?{" "}
-                  <a href="#!" class="text-dark-50 fw-bold">
+                  <a href="#!" className="text-dark-50 fw-bold">
                     Sign Up
                   </a>
                 </p>
               </div>
             </MDBCardBody>
           </MDBCard>
+          <QuizCard {...DummyQuiz[0]} />
         </MDBCol>
       </MDBRow>
     </MDBContainer>
