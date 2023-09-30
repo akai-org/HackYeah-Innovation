@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import http from "node:http";
 import path from "node:path";
 
@@ -40,8 +41,5 @@ const app = express();
 export const pool = database.pool;
 
 export const openai = new OpenAI({
-  // Don't store secrets directly in the source code they said
-  // It's dengerous they said
-  // Brother in Christ, it's save here, trust me
-  apiKey: "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"
+  apiKey: process.env.OPENAI
 });
