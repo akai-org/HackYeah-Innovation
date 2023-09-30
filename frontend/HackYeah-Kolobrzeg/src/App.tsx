@@ -49,7 +49,7 @@ function App() {
                   Forgot password?
                 </a>
               </p>
-              <MDBBtn outline className="mx-2 px-5" color="white" size="lg">
+              <MDBBtn outline className="mx-2 px-5" color="dark" size="lg">
                 Login
               </MDBBtn>
 
@@ -58,7 +58,7 @@ function App() {
                   tag="a"
                   color="none"
                   className="m-3"
-                  style={{ color: "white" }}
+                  style={{ color: "black" }}
                 >
                   <MDBIcon fab icon="facebook-f" size="lg" />
                 </MDBBtn>
@@ -67,7 +67,7 @@ function App() {
                   tag="a"
                   color="none"
                   className="m-3"
-                  style={{ color: "white" }}
+                  style={{ color: "black" }}
                 >
                   <MDBIcon fab icon="twitter" size="lg" />
                 </MDBBtn>
@@ -76,7 +76,7 @@ function App() {
                   tag="a"
                   color="none"
                   className="m-3"
-                  style={{ color: "white" }}
+                  style={{ color: "black" }}
                 >
                   <MDBIcon fab icon="google" size="lg" />
                 </MDBBtn>
