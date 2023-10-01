@@ -1,0 +1,22 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:latest
+    container_name: my-mysql-container
+    env_file:
+      - .env.dev
+    ports:
+      - "3306:3306"
+
+  # app:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   container_name: my-app-container
+  #   volumes:
+  #     - ./app:/app
+  #   depends_on:
+  #     - mysql
+  #   ports:
+  #     - "8080:8080"
+    # command: npm run start:dev # Use this to override the CMD in the Dockerfile
