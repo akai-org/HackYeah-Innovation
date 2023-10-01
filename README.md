@@ -26,9 +26,9 @@ or people in your surroundings in choosing their career path.
 
 # preview
 
-![](.\frontend\HackYeah-Innovation\src\assets\photos\logowanie.png)
-![](.\frontend\HackYeah-Innovation\src\assets\photos\pytania.png)
-![](.\frontend\HackYeah-Innovation\src\assets\photos\pytania2.png)
+![](/frontend/HackYeah-Innovation/src/assets/photos/logowanie.png)
+![](/frontend/HackYeah-Innovation/src/assets/photos/pytania.png)
+![](/frontend/HackYeah-Innovation/src/assets/photos/pytania2.png)
 
 ## Getting Started
 
