@@ -1,7 +1,7 @@
 import { MDBBtn } from "mdb-react-ui-kit";
 import { QuizContext } from "../store/QuizContexProvider";
 import QuizCard, { answersArray } from "./QuizCard";
-import { FormEventHandler, useContext } from "react";
+import { useContext } from "react";
 
 import styles from "./QuizCardList.module.scss";
 
@@ -14,9 +14,9 @@ const QuizCardList = () => {
     fetch("http://10.250.166.149:8080/api/bestUni", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(answersArray)
+      body: JSON.stringify(answersArray),
     })
       .then((res) => res.json())
       .then((res) => {
