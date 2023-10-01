@@ -6,10 +6,14 @@ import {
   MDBCard,
   MDBCardBody,
   MDBInput,
-  MDBIcon
+  MDBIcon,
 } from "mdb-react-ui-kit";
 
-const LoginComponent: React.FC = () => {
+interface LoginComponentProps {
+  onLogin: () => void;
+}
+
+const LoginComponent: React.FC<LoginComponentProps> = ({ onLogin }) => {
   return (
     <>
       <header className="ibe-header">
@@ -66,7 +70,13 @@ const LoginComponent: React.FC = () => {
                     Forgot password?
                   </a>
                 </p>
-                <MDBBtn outline className="mx-2 px-5" color="dark" size="lg">
+                <MDBBtn
+                  outline
+                  className="mx-2 px-5"
+                  color="dark"
+                  size="lg"
+                  onClick={onLogin}
+                >
                   Login
                 </MDBBtn>
 
