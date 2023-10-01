@@ -7,6 +7,7 @@ import OpenAI from "openai";
 
 import {test} from "./controllers/api/test";
 import {login} from "./controllers/api/login";
+import {questions_get} from "./controllers/api/questions";
 import {Database} from "./classes/Database";
 
 const PORT = 8080;
@@ -30,6 +31,9 @@ const app = express();
 
   app.use(express.static(path.join(__dirname, '..', '../frontend/HackYeah-Kolobrzeg')));
   app.use(test);
+
+  app.get('/api/questions', questions_get);
+
   app.post('/login', login);
 
 
