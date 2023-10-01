@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import http from "node:http";
 import path from "node:path";
 
@@ -6,6 +7,7 @@ import OpenAI from "openai";
 
 import {test} from "./controllers/api/test";
 import {login} from "./controllers/api/login";
+import {questions_get} from "./controllers/api/questions";
 import {Database} from "./classes/Database";
 import {answers} from "./controllers/api/answers";
 
@@ -31,6 +33,9 @@ app.use(express.json());
 
   app.use(express.static(path.join(__dirname, '..', '../frontend/HackYeah-Kolobrzeg')));
   app.use(test);
+
+  app.get('/api/questions', questions_get);
+
   app.post('/login', login);
   app.post('/answers', answers)
 
@@ -44,8 +49,5 @@ app.use(express.json());
 export const pool = database.pool;
 
 export const openai = new OpenAI({
-  // Don't store secrets directly in the source code they said
-  // It's dengerous they said
-  // Brother in Christ, it's save here, trust me
-  apiKey: "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"
+  apiKey: process.env.OPENAI
 });
