@@ -3,29 +3,51 @@
 import React, { useState } from "react";
 import styles from "./QuizCard.module.scss";
 
-import { MDBCard, MDBCardBody, MDBBtn } from "mdb-react-ui-kit";
-interface QuizCardProps {
-  question: string;
-  options: string[];
-  isRadio: boolean;
-}
+import { MDBCard, MDBCardBody } from "mdb-react-ui-kit";
+import { QuizDataType } from "../store/QuizContexProvider";
 
-const QuizCard: React.FC<QuizCardProps> = ({ question, options, isRadio }) => {
+const answersArray: { id: number; answer: any }[] = [];
+
+const QuizCard: React.FC<QuizDataType> = ({ id, question, answers }) => {
   const [selectedOption, setSelectedOption] = useState<string[]>([]);
 
-  const handleOptionChange = (option: string) => {
+  const questionsArray = [
+    answers.answer_a,
+    answers.answer_b,
+    answers.answer_c,
+    answers.answer_d
+  ];
+
+  const letter = (option: string) => {
+    if (questionsArray.indexOf(option) === 0) {
+      return "a";
+    }
+
+    if (questionsArray.indexOf(option) === 1) {
+      return "b";
+    }
+
+    if (questionsArray.indexOf(option) === 2) {
+      return "c";
+    }
+
+    if (questionsArray.indexOf(option) === 3) {
+      return "d";
+    }
+  };
+
+  const handleOptionChange = (option: string, id: number) => {
+    answersArray.push({ id: id, answer: letter(option) });
     setSelectedOption((prev) => {
       const previos = prev ?? [];
-      if (isRadio) {
-        return [option];
+      if (previos.includes(option)) {
+        return previos.filter((el: string) => el !== option);
       } else {
-        if (previos.includes(option)) {
-          return previos.filter((el: string) => el !== option);
-        } else {
-          return [...previos, option];
-        }
+        return [...previos, option];
       }
     });
+
+    console.log(answersArray);
   };
 
   return (
@@ -36,34 +58,23 @@ const QuizCard: React.FC<QuizCardProps> = ({ question, options, isRadio }) => {
       <MDBCardBody className="p-5 d-flex flex-column  mx-auto w-100">
         <h2 className={styles.question}>{question}</h2>
         <div className={styles.options}>
-          {options.map((option) => (
+          {questionsArray.map((option) => (
             <div key={option} className={styles.option}>
-              {isRadio ? (
+              {
                 <input
-                  key={option}
-                  type="radio"
-                  id={option}
-                  name="quizOption"
-                  value={option}
-                  checked={selectedOption?.includes(option)}
-                  onChange={() => handleOptionChange(option)}
-                />
-              ) : (
-                <input
-                  key={option}
+                  key={id}
                   type="checkbox"
                   id={option}
-                  name="quizOption"
+                  name={option}
                   value={option}
                   checked={selectedOption?.includes(option)}
-                  onChange={() => handleOptionChange(option)}
+                  onChange={() => handleOptionChange(option, id)}
                 />
-              )}
+              }
               <label htmlFor={option}>{option}</label>
             </div>
           ))}
         </div>
-        <MDBBtn color="dark">Submit</MDBBtn>
       </MDBCardBody>
     </MDBCard>
   );

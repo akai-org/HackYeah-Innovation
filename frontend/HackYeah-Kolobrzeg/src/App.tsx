@@ -1,7 +1,9 @@
-import LoginComponent from "./components/LoginComponent";
+import QuizCardList from "./components/QuizCardList";
 
 function App() {
-  return <LoginComponent />;
+  // const ctx = useContext(QuizContext);
+  // return <LoginComponent />;
+  return <QuizCardList />;
 }
 
 export default App;
