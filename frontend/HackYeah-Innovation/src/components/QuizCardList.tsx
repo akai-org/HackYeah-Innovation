@@ -38,7 +38,7 @@ const QuizCardList = () => {
           ))
         : null}
       <div className={styles.button_div} onClick={() => sendAnswers()}>
-        <MDBBtn color="dark">Submit</MDBBtn>
+        <MDBBtn color="dark">Sprawdź co najlepiej do Ciebie pasuje</MDBBtn>
       </div>
     </>
   );
