@@ -8,6 +8,7 @@ import OpenAI from "openai";
 import {test} from "./controllers/api/test";
 import {login} from "./controllers/api/login";
 import {questions_get} from "./controllers/api/questions";
+import {uni_get} from './controllers/api/uni';
 import {Database} from "./classes/Database";
 import {answers} from "./controllers/api/answers";
 
@@ -35,12 +36,13 @@ app.use(express.json());
   app.use(test);
 
   app.get('/api/questions', questions_get);
+  app.get('/api/uni', uni_get);
 
   app.post('/login', login);
   app.post('/answers', answers)
 
 
-  http.createServer(app).listen(PORT, () => {
+  http.createServer(app).listen(PORT, "0.0.0.0", () => {
     console.log(`Server lisening on port ${PORT}`);
   });
 })();

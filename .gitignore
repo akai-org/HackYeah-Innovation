@@ -3,3 +3,5 @@
 
 # Backend
 /backend/build
+
+.env
