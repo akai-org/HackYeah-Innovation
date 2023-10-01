@@ -1,6 +1,7 @@
 # HackYeah-Innovation
 
 # Task
+
 ```
 EN: Creating effective tools that help in making key life decisions is not only a challenge,
 but also a necessity these days. Especially when we are talking about decisions as important
@@ -23,7 +24,18 @@ Nauki - edukacji.gov.pl.
 Our search engine is a program that utilizes advanced technology to assist you, your child,
 or people in your surroundings in choosing their career path.
 
+# preview
+
+![](frontend\HackYeah-Innovation\src\assets\photos\logowanie.png)
+![](frontend\HackYeah-Innovation\src\assets\photos\pytania.png)
+![](frontend\HackYeah-Innovation\src\assets\photos\pytania2.png)
+
 ## Getting Started
+
+```
+npm install
+npm run dev
+```
 
 ### Prerequisites:
 
@@ -33,14 +45,17 @@ or people in your surroundings in choosing their career path.
 **Backend**
 
 1. Change directory to `api`
+
 ```
 cd ./api
 ```
 
 2. Install dependencies
+
 ```
 npm install
 ```
+
 3. Create docker container
 
 **Frontend**
@@ -48,8 +63,11 @@ npm install
 ## Technologies used
 
 ### Backend:
+
 - Node.js and Express.js
 - Dockerized MySQL database
+
 ### Frontend:
+
 - React with TypeScript
 - Vite
