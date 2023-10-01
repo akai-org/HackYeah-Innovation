@@ -10,6 +10,7 @@ import {login} from "./controllers/api/login";
 import {questions_get} from "./controllers/api/questions";
 import {uni_get} from './controllers/api/uni';
 import {Database} from "./classes/Database";
+import {answers} from "./controllers/api/answers";
 
 const PORT = 8080;
 
@@ -26,6 +27,7 @@ const database = new Database({
 
 const app = express();
 
+app.use(express.json());
 
 (async () => {
   await database.migrate();
@@ -37,12 +39,14 @@ const app = express();
   app.get('/api/uni', uni_get);
 
   app.post('/login', login);
+  app.post('/answers', answers)
 
 
   http.createServer(app).listen(PORT, "0.0.0.0", () => {
     console.log(`Server lisening on port ${PORT}`);
   });
 })();
+
 
 export const pool = database.pool;
 
