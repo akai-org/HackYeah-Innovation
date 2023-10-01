@@ -6,7 +6,7 @@ import styles from "./QuizCard.module.scss";
 import { MDBCard, MDBCardBody } from "mdb-react-ui-kit";
 import { QuizDataType } from "../store/QuizContexProvider";
 
-const answersArray: { id: number; answer: any }[] = [];
+export const answersArray: { id: number; answer: any }[] = [];
 
 const QuizCard: React.FC<QuizDataType> = ({ id, question, answers }) => {
   const [selectedOption, setSelectedOption] = useState<string[]>([]);
