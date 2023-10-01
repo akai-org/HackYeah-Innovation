@@ -7,6 +7,7 @@ import OpenAI from "openai";
 import {test} from "./controllers/api/test";
 import {login} from "./controllers/api/login";
 import {Database} from "./classes/Database";
+import {answers} from "./controllers/api/answers";
 
 const PORT = 8080;
 
@@ -23,6 +24,7 @@ const database = new Database({
 
 const app = express();
 
+app.use(express.json());
 
 (async () => {
   await database.migrate();
@@ -30,12 +32,14 @@ const app = express();
   app.use(express.static(path.join(__dirname, '..', '../frontend/HackYeah-Kolobrzeg')));
   app.use(test);
   app.post('/login', login);
+  app.post('/answers', answers)
 
 
   http.createServer(app).listen(PORT, () => {
     console.log(`Server lisening on port ${PORT}`);
   });
 })();
+
 
 export const pool = database.pool;
 
