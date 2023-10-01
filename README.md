@@ -1,18 +1,8 @@
-# HackYeah-Kolobrzeg
+# HackYeah-Innovation
 
 # Zadanies
 ```
-Kołobrzeg, jak i wiele innych miast w Polsce, stoi przed wyzwaniem dotyczącym braku ośrodka edukacji wyższej.
-Idące za tym konsekwencje to brak dostępu do ekosystemu, które tworzą ośrodki akademickie na styku z biznesem,
-poprzez m.in.: koła naukowe, projekty badawcze, programy stażowe i praktyki biura karier, środowisko akademickie,
-projekty współpracy między uczelnią, a biznesem.
+EN: Creating effective tools that help in making key life decisions is not only a challenge, but also a necessity these days. Especially when we are talking about decisions as important as choosing the right educational institution or field of study. Your task is to create an innovative search engine concept that will allow users to easily and accurately find the school, educational institution or field of study that best suits their individual needs. Your solution can become part of the Polish Education and Science Portal - edukacja.gov.pl.
 
-W konsekwencji, oferta rynku pracy i rozwoju, szczególnie dla osób w wieku 18-35 lat,
-która nie wyjechała na studia np. z przyczyn ekonomicznych, jest bardzo ograniczona do lokalnej gospodarki,
-w przypadku Kołobrzegu: turystyki, hotelarstwa i gastronomii.
-
-Kołobrzeg poszukuje rozwiązania, które będzie wspierać w budowaniu społeczności osób zainteresowanych rozwojem osobistym i
-zawodowym, w środowisku i projektach oraz strukturach, wzorowanych na akademickich, w szczególności współpracy
-z małym i większym biznesem. Programiści będą mieli do dyspozycji dane związane z problemem,
-np. statystyki zatrudnienia, ankietowe wyniki, dane geoprzestrzenne.
+PL: Stworzenie skutecznych narzędzi, które pomagają w podejmowaniu kluczowych decyzji życiowych, jest nie tylko wyzwaniem, ale także koniecznością w dzisiejszych czasach. Szczególnie, gdy mówimy o decyzjach tak ważnych, jak wybór odpowiedniej placówki edukacyjnej czy kierunku studiów. Twoim zadaniem jest stworzenie innowacyjnej koncepcji wyszukiwarki, która pozwoli użytkownikom na łatwe i dokładne znalezienie szkoły, placówki oświatowej lub kierunku studiów, które najlepiej odpowiada ich indywidualnym potrzebom. Twoje rozwiązanie może stać się częścią Portalu Edukacji i Nauki - edukacji.gov.pl.
 ```
